@@ -17,10 +17,10 @@ The project should be slowly developed into different phases:
 DETAIL DESIGN:
 1. multiple flight records from the website would be searched and save into dataframe, each records would conains information as airport, date, time, number of stops, intermediate airport(s) of those stops, flight amount, flight hours, airline.
 2. information would be cleaned, filtered, merged and organized into final information
-3. number of plots/charts and the dataframe for flight prices would be save into a .pdf, .xlsx and .txt files,
-    3.1 .pdf stores a number of plots that show flight prices, hours, date and time, possible trip duration days distribution
-    3.2 .xlsx stores the list of flight records sorted by ascending flight prices
-    3.3 .txt is a info file keep track of date and time of the flight quiry, quiry records, etc.
+3. number of plots/charts and the dataframe for flight prices would be save into a .pdf, .xlsx and .txt files:   
+    3.1 .pdf stores a number of plots that show flight prices, hours, date and time, possible trip duration days distribution   
+    3.2 .xlsx stores the list of flight records sorted by ascending flight prices   
+    3.3 .txt is a info file keep track of date and time of the flight quiry, quiry records, etc.   
 4. The three files in 3) will be sent to user for periodic monitoring (eg. script run and send result every 3 hours)
 
 
