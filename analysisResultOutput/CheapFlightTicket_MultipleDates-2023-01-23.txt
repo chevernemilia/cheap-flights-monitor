@@ -1,0 +1,29 @@
+Date & Time for Flights Inquiry: 2023-01-23: 16:27 PM
+
+city_from: SFO
+city_to: LHR
+flight_date: ['2023-05-03', '2023-05-10', '2023-05-17', '2023-05-24']
+nbr_dt_range_search: 3
+nbr_click_this_session: 3
+
+city_from: CDG
+city_to: SFO
+flight_date: ['2023-05-10', '2023-05-17', '2023-05-24', '2023-06-03']
+nbr_dt_range_search: 3
+nbr_click_this_session: 3
+Nbr of cheap flights in this search: 209
+--- 123.84 mintues to complete this seach session. --------
+
+price_threshold_depart: 632.53
+flight_hr_threshold_depart: 10.42
+price_threshold_return: 681
+flight_hr_threshold_return: 17.38
+trip_duration_threshold: [5, 14]
+Best round-trip flights filtered: 429
+trip_duration_threshold: [5, 14]
+Best round-trip flights filtered: 429
+
+Files Locations:
+/Users/eli/Python/personal_projects/CheapFlightTickets/analysisResultOutput/CheapFlightTicket_MultipleDates-2023-01-23.pdf
+/Users/eli/Python/personal_projects/CheapFlightTickets/analysisResultOutput/CheapFlightTicket_MultipleDates-2023-01-23.xlsx
+/Users/eli/Python/personal_projects/CheapFlightTickets/analysisResultOutput/CheapFlightTicket_MultipleDates-2023-01-23.txt
