@@ -25,7 +25,7 @@ DETAIL DESIGN:
 
 
 
-PROJECT SOURCES INFO:
+PROJECT SOURCES INFO:  
 website for major data crawl: kayak   
 python module for data crawl: selenium  
 web browser: Google Chrome   
