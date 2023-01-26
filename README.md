@@ -26,11 +26,11 @@ DETAIL DESIGN:
 
 
 PROJECT SOURCES INFO:
-website for major data crawl: kayak
-python module for data crawl: selenium
-web browser: Google Chrome
-website driver: chromedriver (version update almost every month, or twice per quarter according to source online)
-python version: 3.7
+website for major data crawl: kayak\n
+python module for data crawl: selenium\n
+web browser: Google Chrome\n
+website driver: chromedriver (version update almost every month, or twice per quarter according to source online)\n
+python version: 3.7\n
 
 POSSIBLE TECHNICAL ISSUES:
 - if the google chrome is updated to a newer version (mostly done automatically), a chrome driver which version that's consistent with the version of google chrome need to be installed to a path where the system path can point to.
