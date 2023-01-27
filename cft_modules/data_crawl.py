@@ -20,6 +20,10 @@ from selenium.webdriver.support import expected_conditions
 # from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver import ActionChains
 
+# customized module import
+from cft_modules.clean_organize import * 
+from cft_modules.data_format import *
+
 
 def load_more(driver):
     main_window = driver.window_handles[0]
@@ -159,8 +163,8 @@ def get_cheap_flights(city_from, city_to, flight_date, nbr_dt_range_search, nbr_
     # print(flight_containers)
     flight_list = [flight.text for flight in flight_containers]
     flight_list
-#     print('Nbr of flights in this search ssessions:\n')
-#     print(len(flight_list))
+    print('INSIDE get_cheap_flights FUNCTION: Nbr of flights in this search ssessions:\n')
+    print(len(flight_list))
 
 # #     want to closed all window/browser after each set of searches
 #     handles = driver.window_handles
@@ -172,7 +176,7 @@ def get_cheap_flights(city_from, city_to, flight_date, nbr_dt_range_search, nbr_
     if (len(flight_list) != 0):
         ############## convert all events in flight_list into df based on either exact date or date range########################################################
         flight_df_price = get_exact_dt_flight_price_info_df(flight_list)
-
+        
         if (nbr_dt_range_search ==1):
             flight_df_logistics =  get_exact_dt_flight_logistics_info_df(flight_list, flight_date)
         else:
@@ -189,7 +193,7 @@ def get_cheap_flights(city_from, city_to, flight_date, nbr_dt_range_search, nbr_
         flight_df_joint['date'] = flight_df_joint['date'].astype(str)
 
         flight_df_joint['datetime'] = flight_df_joint['date'] + " - " + flight_df_joint['time']
-
+            
         # this is only applicable for multi days search where the query date format available are diff:
         # for single day search the date used in df would be yyyy-mm-dd whereas in multi days search the date query are (m)m/(d)d
         ############################ format the string date with prefix "0" if mo/dt are single digit, easier to sort#################################
@@ -203,8 +207,6 @@ def get_cheap_flights(city_from, city_to, flight_date, nbr_dt_range_search, nbr_
                 fmt_date_list.append(fmt_date)
             flight_df_joint['date'] = fmt_date_list
         ############################ end format the string date with prefix "0" if mo/dt are single digit, easier to sort#################################
-
-
         
         flight_df_joint = flight_df_joint.fillna(0)
 

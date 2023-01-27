@@ -1,4 +1,7 @@
 
+import pandas as pd
+import numpy as np  
+import re
 
 
 
@@ -84,10 +87,10 @@ def get_exact_dt_flight_logistics_info_df(flight_list, flight_date):
         flight_df
 
         # clean up variables values since each event shift left/right arbitrary
-        flight_df['to'] = np.where (flight_df['nbr_stop']  == 'nonstop',flight_df['direct_to'], flight_df['indirect_to'])
-        flight_df['from'] = np.where (flight_df['nbr_stop']  == 'nonstop', flight_df['duration'], flight_df['from'])
-        flight_df['duration'] = np.where (flight_df['nbr_stop']  == 'nonstop',  flight_df['intermediate_stop'], flight_df['duration'])
-        flight_df['intermediate_stop'] = np.where (flight_df['nbr_stop']  == 'nonstop', '--', flight_df['intermediate_stop'])
+        flight_df['to'] = np.where(flight_df['nbr_stop']  == 'nonstop',flight_df['direct_to'], flight_df['indirect_to'])
+        flight_df['from'] = np.where(flight_df['nbr_stop']  == 'nonstop', flight_df['duration'], flight_df['from'])
+        flight_df['duration'] = np.where(flight_df['nbr_stop']  == 'nonstop',  flight_df['intermediate_stop'], flight_df['duration'])
+        flight_df['intermediate_stop'] = np.where(flight_df['nbr_stop']  == 'nonstop', '--', flight_df['intermediate_stop'])
         keep_col = [col for col in flight_df.columns if '_t' not in col]
         flight_df = flight_df[keep_col]
 
@@ -118,13 +121,12 @@ def get_multi_dt_flight_logistics_info_df(flight_list):
     ####################################end of date range for flight_df############################################
 
         # clean up variables values since each event shift left/right arbitrary
-    flight_df['to'] = np.where (flight_df['nbr_stop']  == 'nonstop',flight_df['direct_to'], flight_df['indirect_to'])
-    flight_df['from'] = np.where (flight_df['nbr_stop']  == 'nonstop', flight_df['duration'], flight_df['from'])
-    flight_df['duration'] = np.where (flight_df['nbr_stop']  == 'nonstop',  flight_df['intermediate_stop'], flight_df['duration'])
-    flight_df['intermediate_stop'] = np.where (flight_df['nbr_stop']  == 'nonstop', '--', flight_df['intermediate_stop'])
+    flight_df['to'] = np.where(flight_df['nbr_stop']  == 'nonstop',flight_df['direct_to'], flight_df['indirect_to'])
+    flight_df['from'] = np.where(flight_df['nbr_stop']  == 'nonstop', flight_df['duration'], flight_df['from'])
+    flight_df['duration'] = np.where(flight_df['nbr_stop']  == 'nonstop',  flight_df['intermediate_stop'], flight_df['duration'])
+    flight_df['intermediate_stop'] = np.where(flight_df['nbr_stop']  == 'nonstop', '--', flight_df['intermediate_stop'])
     keep_col = [col for col in flight_df.columns if '_t' not in col]
     flight_df = flight_df[keep_col]
-
     return(flight_df)
 
 

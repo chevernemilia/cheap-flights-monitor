@@ -1,7 +1,5 @@
 
 
-
-
 import re
 
 def convert_duration_str_to_int(duration_str_col):

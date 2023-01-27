@@ -1,6 +1,7 @@
 
-
-
+import matplotlib.pyplot as plt
+import numpy as np
+import six
 
 def render_mpl_table(data, col_width=2.0, row_height=0.4, font_size=9,
                      header_color='#40466e', row_colors=['#f1f1f2', 'w'], edge_color='w',
